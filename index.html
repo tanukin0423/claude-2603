@@ -491,6 +491,14 @@
   .tool-link-btn:hover { background: #C8E6C9; transform: translateX(3px); }
 
 
+
+  .tool-link-btn.download-btn {
+    background: linear-gradient(135deg, #F5F3FF, #EDE9FE);
+    border-color: #C4B5FD;
+    color: #5B21B6;
+  }
+  .tool-link-btn.download-btn:hover { background: #C4B5FD; transform: translateX(3px); }
+
   .tool-link-btn.blue-btn {
     background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
     border-color: #BFDBFE;
@@ -976,13 +984,17 @@ const data = {
       title: '業界・企業・職種研究ツール',
       body: `<p>キャリ爺オリジナルのAI活用ツールと、情報収集サイトを組み合わせて使いましょう。</p>
 <div style="margin-top:12px; background:linear-gradient(135deg,#F0FDF4,#DCFCE7); border:1px solid #BBF7D0; border-radius:10px; padding:12px 14px;">
-  <div style="font-size:12px; font-weight:700; color:#14532D; margin-bottom:8px;">🌱 キャリ爺オリジナルAIツール</div>
-  <div class="tool-desc-item"><span class="tool-desc-name">🔍 STEPの流れ</span><span class="tool-desc-text"><strong>①まず全体を把握</strong>——業界・企業・職種研究ページで広く調べる<br><strong>②気になる企業を深掘り</strong>——AI企業研究ツールで企業名・職種・自分の経験を入力→AIへの質問プロンプトが自動生成される</span></div>
+  <div style="font-size:12px; font-weight:700; color:#14532D; margin-bottom:10px;">🌱 キャリ爺オリジナルAIツール——2STEPで使おう</div>
+  <div class="tool-desc-item"><span class="tool-desc-name">🌱 業界研究</span><span class="tool-desc-text">19業界から選択→AIへの質問プロンプトを自動生成。感想メモ・ダウンロード機能付き。</span></div>
+  <div class="tool-desc-item"><span class="tool-desc-name">🔧 職種研究</span><span class="tool-desc-text">20職種から選択→AIプロンプト生成。「どんな仕事か」を具体的に把握できる。</span></div>
+  <div class="tool-desc-item" style="margin-bottom:8px;"><span class="tool-desc-name">🏢 企業研究</span><span class="tool-desc-text">企業名・業界・職種・自分の経験を入力→企業分析プロンプトを自動生成。ES・面接準備に直結。</span></div>
+  <div style="font-size:11px; color:#166534; background:#DCFCE7; padding:6px 10px; border-radius:6px;">⚠️ AIの回答をそのままコピペしないこと。自分の言葉で考察してこそ意味があります。</div>
 </div>`,
       tools: [
         { icon: '▶️', name: '企業研究の解説動画（近日公開予定）', url: '#', isVideo: true, comingSoon: true },
-        { icon: '🔍', name: '【STEP1】業界・企業・職種研究ページ', url: 'https://tanukin0423.github.io/gyo-kigyou-shoku/' },
-        { icon: '🏢', name: '【STEP2】AI企業研究プロンプト生成ツール', url: 'https://kitayama-tama.github.io/kigyoukenkyu/' },
+        { icon: '🌱', name: '業界研究（19業界対応）', url: 'https://tanukin0423.github.io/gyo-kigyou-shoku/業界研究ページver8.html' },
+        { icon: '🔧', name: '職種研究（20職種対応）', url: 'https://tanukin0423.github.io/gyo-kigyou-shoku/職種研究ページver2.html' },
+        { icon: '🏢', name: '企業研究AIプロンプト生成ツール', url: 'https://kitayama-tama.github.io/kigyoukenkyu/' },
         { icon: '💬', name: 'OpenWork（社員クチコミ）', url: 'https://www.openwork.jp/' },
         { icon: '🔍', name: 'ワンキャリア（先輩のES・体験談）', url: 'https://onecareer.jp/' },
       ]
@@ -1090,9 +1102,8 @@ const data = {
         { icon: '▶️', name: '15日間の面接練習（使い方説明動画）', url: 'https://youtu.be/gzmyAvu0sHw', isVideo: true },
         { icon: '▶️', name: '面接練習 第一回', url: 'https://youtu.be/TEqvADe_mvU', isVideo: true },
         { icon: '▶️', name: '手ごわいシリーズ 全編紹介', url: 'https://youtu.be/9LdGcSxtjfY', isVideo: true },
-        { icon: '🎤', name: '面接対策ワークシート（Q1〜15）', url: 'https://kitayama-tama.github.io/' },
+        { icon: '⬇️', name: '面接対策ワークシート（★面接質問15選完全攻略ノート）', url: 'https://tanukin0423.github.io/claude-2603/mentai15sheet.pdf', isDownload: true },
         { icon: '📅', name: '15日間の面接練習サイト', url: 'https://tanukin0423.github.io/mentai15days/' },
-        { icon: '📄', name: 'Word出力版（印刷用）', url: 'https://kitayama-tama.github.io/' },
         { icon: '💬', name: 'キャリア支援課で模擬面接を予約', url: 'https://kitayama-tama.github.io/' },
       ]
     }
@@ -1124,8 +1135,8 @@ const data = {
   <a href="https://tanukin0423.github.io/mentai15days/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:white;border:1px solid #BBF7D0;border-radius:8px;text-decoration:none;color:#14532D;font-size:12px;font-weight:600;margin-bottom:5px;">🎤 面接対策｜15日間の面接練習</a>
 </div>
 <div style="margin-top:10px; background:linear-gradient(135deg,#EFF6FF,#DBEAFE); border:1px solid #BFDBFE; border-radius:10px; padding:12px 14px;">
-  <div style="font-size:12px; font-weight:700; color:#1E40AF; margin-bottom:8px;">💬 キャリア支援課に相談する</div>
-  <p style="font-size:13px; color:#1E3A8A; line-height:1.7; margin-bottom:8px;">担当の職員・相談員が皆さんを直接サポートします。担当者がわかる方は直接メールで、わからない場合はお電話ください。</p>
+  <div style="font-size:12px; font-weight:700; color:#1E40AF; margin-bottom:8px;">💬 模擬面接・個別相談について</div>
+  <p style="font-size:13px; color:#1E3A8A; line-height:1.7; margin-bottom:10px;">まずは<strong>ゼミ担当の職員または相談員あてに直接メール</strong>で連絡してください。<br>連絡が取れない場合は、下記へご連絡ください。</p>
   <a href="mailto:placement@gr.tama.ac.jp" style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:white;border:1px solid #BFDBFE;border-radius:8px;text-decoration:none;color:#1E40AF;font-size:12px;font-weight:600;margin-bottom:5px;">📧 placement@gr.tama.ac.jp</a>
   <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:white;border:1px solid #BFDBFE;border-radius:8px;font-size:12px;font-weight:600;color:#1E40AF;">📞 042-337-7118</div>
 </div>`,
@@ -1163,8 +1174,8 @@ const data = {
   <a href="https://tanukin0423.github.io/mentai15days/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:white;border:1px solid #BBF7D0;border-radius:8px;text-decoration:none;color:#14532D;font-size:12px;font-weight:600;margin-bottom:5px;">🎤 面接対策｜15日間の面接練習</a>
 </div>
 <div style="margin-top:10px; background:linear-gradient(135deg,#EFF6FF,#DBEAFE); border:1px solid #BFDBFE; border-radius:10px; padding:12px 14px;">
-  <div style="font-size:12px; font-weight:700; color:#1E40AF; margin-bottom:8px;">💬 キャリア支援課に相談する</div>
-  <p style="font-size:13px; color:#1E3A8A; line-height:1.7; margin-bottom:8px;">担当の職員・相談員が皆さんを直接サポートします。担当者がわかる方は直接メールで、わからない場合はお電話ください。</p>
+  <div style="font-size:12px; font-weight:700; color:#1E40AF; margin-bottom:8px;">💬 模擬面接・個別相談について</div>
+  <p style="font-size:13px; color:#1E3A8A; line-height:1.7; margin-bottom:10px;">まずは<strong>ゼミ担当の職員または相談員あてに直接メール</strong>で連絡してください。<br>連絡が取れない場合は、下記へご連絡ください。</p>
   <a href="mailto:placement@gr.tama.ac.jp" style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:white;border:1px solid #BFDBFE;border-radius:8px;text-decoration:none;color:#1E40AF;font-size:12px;font-weight:600;margin-bottom:5px;">📧 placement@gr.tama.ac.jp</a>
   <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:white;border:1px solid #BFDBFE;border-radius:8px;font-size:12px;font-weight:600;color:#1E40AF;">📞 042-337-7118</div>
 </div>`,
@@ -1212,6 +1223,8 @@ function openModal(key, type) {
             </button>
             <div class="expand-body" id="${eid}">${t.expandText}</div>
           </div>`;
+        } else if (t.isDownload) {
+          bodyHTML += `<a class="tool-link-btn download-btn" href="${t.url}" download><span class="tl-icon">${t.icon}</span>${t.name}</a>`;
         } else {
           const btnClass = t.isBlue ? 'tool-link-btn blue-btn' : 'tool-link-btn';
           bodyHTML += `<a class="${btnClass}" href="${t.url}" target="_blank" rel="noopener"><span class="tl-icon">${t.icon}</span>${t.name}</a>`;
