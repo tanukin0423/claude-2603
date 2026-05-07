@@ -4,169 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ES作成・添削｜28卒 就活の木</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"><\/script>
 <style>
-:root{--gd:#2C5F2D;--gm:#4A8C4B;--gl:#97BC62;--gp:#E8F5E9;--am:#F59E0B;--al:#FEF3C7;--bl:#1D4ED8;--bll:#EFF6FF;--gy:#1F2937;--gmy:#6B7280;--glg:#F3F4F6;--sh:0 4px 20px rgba(0,0,0,0.10);}
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Noto Sans JP',sans-serif;background:linear-gradient(135deg,#f0fdf0 0%,#fefce8 60%,#f0fdf4 100%);min-height:100vh;color:var(--gy);}
-.page-header{background:var(--gd);color:white;padding:20px 20px 24px;text-align:center;position:relative;}
-.page-header .brand{font-size:11px;font-weight:700;letter-spacing:0.12em;color:#97BC62;margin-bottom:10px;}
-.page-header .main-icon{font-size:48px;margin-bottom:8px;display:block;}
-.page-header h1{font-size:26px;font-weight:900;line-height:1.2;margin-bottom:6px;}
-.page-header .sub{font-size:12px;color:#C6E1C6;line-height:1.7;}
-.timing-bar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:14px 16px;background:white;border-bottom:2px solid var(--gp);}
-.timing-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;}
-.timing-badge.green{background:var(--gp);color:var(--gd);border:1px solid #C8E6C9;}
-.timing-badge.amber{background:var(--al);color:#92400E;border:1px solid #FDE68A;}
-.timing-badge.red{background:#FEE2E2;color:#991B1B;border:1px solid #FECACA;}
-.timing-badge.gold{background:#FEF9C3;color:#854D0E;border:1px solid #FDE68A;}
-.content{max-width:680px;margin:0 auto;padding:20px 16px 40px;}
-.section{background:white;border-radius:20px;box-shadow:var(--sh);margin-bottom:16px;overflow:hidden;}
-.section-header{padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #F0F0F0;}
-.section-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.section-icon.what{background:#DBEAFE;}
-.section-icon.how{background:#D1FAE5;}
-.section-label{font-size:10px;font-weight:700;letter-spacing:0.1em;color:var(--gmy);margin-bottom:2px;}
-.section-title{font-size:15px;font-weight:700;color:var(--gy);line-height:1.3;}
-.section-body{padding:18px 20px;font-size:14px;line-height:1.85;color:#374151;}
-.section-body p{margin-bottom:12px;}
-.section-body p:last-child{margin-bottom:0;}
-.doshi{margin-top:14px;padding:14px 16px;background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border-left:4px solid var(--gm);border-radius:0 12px 12px 0;font-size:13px;line-height:1.75;color:#1F4D20;}
-.doshi-label{display:block;font-size:11px;font-weight:700;color:var(--gd);margin-bottom:6px;letter-spacing:0.05em;}
-.new-rule{margin-top:12px;padding:14px 16px;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border-left:4px solid var(--bl);border-radius:0 12px 12px 0;font-size:13px;line-height:1.75;color:#1E3A8A;}
-.new-rule-label{display:block;font-size:11px;font-weight:700;color:#1E40AF;margin-bottom:6px;}
-.tool-desc-box{margin-top:12px;background:#F8FFF8;border:1px solid #C8E6C9;border-radius:10px;padding:12px 14px;}
-.tool-desc-item{display:flex;gap:8px;margin-bottom:8px;font-size:13px;}
-.tool-desc-item:last-child{margin-bottom:0;}
-.tool-desc-name{font-weight:700;color:var(--gd);min-width:80px;flex-shrink:0;}
-.tool-desc-text{color:#374151;line-height:1.6;}
-.tool-list{display:flex;flex-direction:column;gap:10px;margin-top:14px;}
-.tool-link{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--glg);border:1.5px solid #E5E7EB;border-radius:14px;text-decoration:none;color:var(--gy);font-size:13px;font-weight:700;transition:transform 0.15s,box-shadow 0.15s,background 0.15s;cursor:pointer;width:100%;text-align:left;}
-.tool-link:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.12);background:white;}
-.tool-link .tool-icon{width:40px;height:40px;border-radius:10px;background:white;border:1px solid #E5E7EB;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
-.tool-link .tool-text{flex:1;line-height:1.4;}
-.tool-link .tool-sub{font-size:11px;color:var(--gmy);font-weight:400;margin-top:2px;}
-.tool-link .arrow{color:var(--gmy);font-size:14px;}
-.tool-link.featured{background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border-color:#A7F3D0;color:var(--gd);}
-.tool-link.featured .arrow{color:var(--gm);}
-.tool-link.blue{background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border-color:#BFDBFE;color:#1E40AF;}
-.tool-link.blue .arrow{color:var(--bl);}
-.tool-link.video{background:linear-gradient(135deg,#FFF7ED,#FEF3C7);border-color:#FDE68A;color:#92400E;}
-.tool-link.video .arrow{color:var(--am);}
-.tool-link.download{background:linear-gradient(135deg,#F5F3FF,#EDE9FE);border-color:#DDD6FE;color:#5B21B6;}
-.tool-link.download .arrow{color:#7C3AED;}
-.expandable{display:flex;flex-direction:column;}
-.expand-btn{border:none;}
-.expand-body{display:none;background:#FFFBEB;border:1px solid #FDE68A;border-top:none;border-radius:0 0 12px 12px;padding:12px 16px;font-size:13px;line-height:1.75;color:#78350F;}
-.expand-body.open{display:block;}
-.qr-section{background:white;border-radius:20px;box-shadow:var(--sh);padding:24px 20px;text-align:center;margin-bottom:16px;border:2px solid var(--gp);}
-.qr-title{font-size:12px;font-weight:700;color:var(--gmy);letter-spacing:0.1em;margin-bottom:16px;}
-#qrcode{display:flex;justify-content:center;margin-bottom:14px;}
-#qrcode img,#qrcode canvas{border-radius:12px;border:3px solid var(--gp);padding:8px;background:white;}
-.qr-url{font-size:10px;color:var(--gmy);word-break:break-all;margin-top:8px;background:var(--glg);padding:8px 12px;border-radius:8px;}
-.page-footer{text-align:center;padding:20px;font-size:12px;color:var(--gmy);border-top:1px solid #E5E7EB;background:white;}
-.page-footer .footer-brand{font-weight:700;color:var(--gd);margin-bottom:4px;font-size:13px;}
-@media print{body{background:white;}.page-header{background:#2C5F2D!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic',Meiryo,sans-serif;background:linear-gradient(135deg,#f0fdf0 0%,#fefce8 60%,#f0fdf4 100%);min-height:100vh;color:#1F2937;}
+.hd{background:#2C5F2D;color:white;padding:20px 20px 24px;text-align:center;}
+.hd .br{font-size:11px;font-weight:700;letter-spacing:0.12em;color:#97BC62;margin-bottom:10px;}
+.hd .mi{font-size:48px;margin-bottom:8px;display:block;}
+.hd h1{font-size:26px;font-weight:900;line-height:1.2;margin-bottom:6px;}
+.hd .sb{font-size:12px;color:#C6E1C6;line-height:1.7;}
+.tb{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:14px 16px;background:white;border-bottom:2px solid #E8F5E9;}
+.badge{display:inline-flex;align-items:center;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;}
+.badge.g{background:#E8F5E9;color:#2C5F2D;border:1px solid #C8E6C9;}
+.badge.a{background:#FEF3C7;color:#92400E;border:1px solid #FDE68A;}
+.badge.r{background:#FEE2E2;color:#991B1B;border:1px solid #FECACA;}
+.badge.gold{background:#FEF9C3;color:#854D0E;border:1px solid #FDE68A;}
+.ct{max-width:680px;margin:0 auto;padding:20px 16px 40px;}
+.sec{background:white;border-radius:20px;box-shadow:0 4px 20px rgba(0,0,0,0.10);margin-bottom:16px;overflow:hidden;}
+.sh{padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #F0F0F0;}
+.si{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.si.q{background:#DBEAFE;} .si.h{background:#D1FAE5;}
+.sl{font-size:10px;font-weight:700;letter-spacing:0.1em;color:#6B7280;margin-bottom:2px;}
+.st{font-size:15px;font-weight:700;color:#1F2937;line-height:1.3;}
+.sb2{padding:18px 20px;font-size:14px;line-height:1.85;color:#374151;}
+.sb2 p{margin-bottom:12px;} .sb2 p:last-child{margin-bottom:0;}
+.doshi{margin-top:14px;padding:14px 16px;background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border-left:4px solid #4A8C4B;border-radius:0 12px 12px 0;font-size:13px;line-height:1.75;color:#1F4D20;}
+.dl{display:block;font-size:11px;font-weight:700;color:#2C5F2D;margin-bottom:6px;}
+.nr{margin-top:12px;padding:14px 16px;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border-left:4px solid #1D4ED8;border-radius:0 12px 12px 0;font-size:13px;line-height:1.75;color:#1E3A8A;}
+.nrl{display:block;font-size:11px;font-weight:700;color:#1E40AF;margin-bottom:6px;}
+.tdb{margin-top:12px;background:#F8FFF8;border:1px solid #C8E6C9;border-radius:10px;padding:12px 14px;}
+.tdi{display:flex;gap:8px;margin-bottom:8px;font-size:13px;} .tdi:last-child{margin-bottom:0;}
+.tdn{font-weight:700;color:#2C5F2D;min-width:80px;flex-shrink:0;} .tdt{color:#374151;line-height:1.6;}
+.tl{display:flex;flex-direction:column;gap:10px;margin-top:14px;}
+.lnk{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#F3F4F6;border:1.5px solid #E5E7EB;border-radius:14px;text-decoration:none;color:#1F2937;font-size:13px;font-weight:700;}
+.lnk .ic{width:40px;height:40px;border-radius:10px;background:white;border:1px solid #E5E7EB;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.lnk .tx{flex:1;line-height:1.4;} .lnk .sub{font-size:11px;color:#6B7280;font-weight:400;margin-top:2px;}
+.lnk .ar{color:#6B7280;font-size:14px;}
+.lnk.gr{background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border-color:#A7F3D0;color:#2C5F2D;}
+.lnk.bl{background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border-color:#BFDBFE;color:#1E40AF;}
+.lnk.vd{background:linear-gradient(135deg,#FFF7ED,#FEF3C7);border-color:#FDE68A;color:#92400E;}
+.lnk.dl2{background:linear-gradient(135deg,#F5F3FF,#EDE9FE);border-color:#DDD6FE;color:#5B21B6;}
+.exp-btn{border:none;cursor:pointer;width:100%;text-align:left;}
+.exp-body{display:none;background:#FFFBEB;border:1px solid #FDE68A;border-top:none;border-radius:0 0 12px 12px;padding:12px 16px;font-size:13px;line-height:1.75;color:#78350F;}
+.exp-body.open{display:block;}
+.qrs{background:white;border-radius:20px;box-shadow:0 4px 20px rgba(0,0,0,0.10);padding:24px 20px;text-align:center;margin-bottom:16px;border:2px solid #E8F5E9;}
+.qt{font-size:12px;font-weight:700;color:#6B7280;letter-spacing:0.1em;margin-bottom:16px;}
+.qu{font-size:10px;color:#6B7280;word-break:break-all;margin-top:8px;background:#F3F4F6;padding:8px 12px;border-radius:8px;}
+.ft{text-align:center;padding:20px;font-size:12px;color:#6B7280;border-top:1px solid #E5E7EB;background:white;}
+.ft .fb{font-weight:700;color:#2C5F2D;margin-bottom:4px;font-size:13px;}
+@media print{body{background:white;}.hd{background:#2C5F2D!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
 </style>
 </head>
 <body>
-<div class="page-header">
-  <div class="brand">🌱 就活の木｜キャリ爺（北山 四郎）作成</div>
-  <span class="main-icon">📋</span>
+<div class="hd">
+  <div class="br">🌱 就活の木｜キャリ爺（北山 四郎）作成</div>
+  <span class="mi">📋</span>
   <h1>ES作成・添削</h1>
-  <div class="sub">志望動機・ガクチカ・自己PR。<br>ESは面接の設計図。丁寧に書くほど面接が楽になる。</div>
+  <div class="sb">志望動機・ガクチカ・自己PR。<br>ESは面接の設計図。</div>
 </div>
-<div class="timing-bar"><span class="timing-badge amber">🌸〜 夏 スタート</span><span class="timing-badge red">🍂 秋冬 集中期</span></div>
-<div class="content">
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon what">❓</div>
-      <div>
-        <div class="section-label">何をやるの？＋なぜやるの？</div>
-        <div class="section-title">ES作成・添削について知ろう</div>
-      </div>
-    </div>
-    <div class="section-body"><p>エントリーシート（ES）は「書類選考」のための自己紹介書類です。</p>
-<p>主な設問は「志望動機」「自己PR」「ガクチカ（学生時代に力を入れたこと）」の3つ。企業ごとに内容をカスタマイズして提出します。</p>
-<div class="tool-desc-box">
-  <div class="tool-desc-item"><span class="tool-desc-name">📝 5〜6月</span><span class="tool-desc-text">ES作成スタート。自己分析をもとに素材集め・下書き開始。</span></div>
-  <div class="tool-desc-item"><span class="tool-desc-name">🏆 7〜8月</span><span class="tool-desc-text">第一段階完成。インターン応募用ESを仕上げる。添削を繰り返す。</span></div>
-  <div class="tool-desc-item"><span class="tool-desc-name">🔥 9〜10月</span><span class="tool-desc-text">ブラッシュアップ。早期選考直結型ESへ磨き上げる。最重要フェーズ。</span></div>
-  <div class="tool-desc-item"><span class="tool-desc-name">✅ 11月〜</span><span class="tool-desc-text">企業別カスタマイズ。本選考・プレ本選考に合わせて継続改善。</span></div>
+<div class="tb"><span class="badge a">🌸〜 夏 スタート</span><span class="badge r">🍂 秋冬 集中期</span></div>
+<div class="ct">
+  <div class="sec">
+    <div class="sh"><div class="si q">❓</div><div><div class="sl">何をやるの？＋なぜやるの？</div><div class="st">ES作成・添削について知ろう</div></div></div>
+    <div class="sb2"><p>エントリーシート（ES）は「書類選考」のための自己紹介書類です。主な設問は「志望動機」「自己PR」「ガクチカ」の3つ。</p>
+<div class="tdb">
+  <div class="tdi"><span class="tdn">📝 5〜6月</span><span class="tdt">ES作成スタート。自己分析をもとに素材集め・下書き開始。</span></div>
+  <div class="tdi"><span class="tdn">🏆 7〜8月</span><span class="tdt">第一段階完成。インターン応募用ESを仕上げる。添削を繰り返す。</span></div>
+  <div class="tdi"><span class="tdn">🔥 9〜10月</span><span class="tdt">ブラッシュアップ。早期選考直結型ESへ磨き上げる。最重要フェーズ。</span></div>
+  <div class="tdi"><span class="tdn">✅ 11月〜</span><span class="tdt">企業別カスタマイズ。本選考に合わせて継続改善。</span></div>
 </div>
-<div class="doshi"><span class="doshi-label">🔥 キャリ爺のド推しポイント</span>「ESは面接の設計図です。5月に始めた人が、9月に笑います。添削を恐れずキャリア支援課に持ってきてください。」</div></div>
+<div class="doshi"><span class="dl">🔥 キャリ爺のド推しポイント</span>「ESは面接の設計図です。5月に始めた人が、9月に笑います。添削を恐れずキャリア支援課に持ってきてください。」</div></div>
   </div>
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon how">💡</div>
-      <div>
-        <div class="section-label">どうやるの？ツール</div>
-        <div class="section-title">使えるツール・サイト</div>
-      </div>
-    </div>
-    <div class="section-body">
-      <p>ESは「白紙から書く」必要はありません。まずはたくさんの事例・サンプル文例を読んで、感覚をつかむところから始めましょう。</p>
-<div style="margin-top:12px;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border:1px solid #BFDBFE;border-radius:10px;padding:12px 14px;">
-  <div style="font-size:12px;font-weight:700;color:#1E40AF;margin-bottom:8px;">🔰 まず始めたい方——フルバージョン（STARメソッド）</div>
-  <div style="display:flex;flex-wrap:wrap;gap:6px;">
-    <span style="background:#DBEAFE;color:#1E3A8A;font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px;">🎯 ガクチカ 21例</span>
-    <span style="background:#DBEAFE;color:#1E3A8A;font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px;">💪 自己PR 20例</span>
-    <span style="background:#DBEAFE;color:#1E3A8A;font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px;">🧭 志望動機 24例</span>
+  <div class="sec">
+    <div class="sh"><div class="si h">💡</div><div><div class="sl">どうやるの？ツール</div><div class="st">使えるツール・サイト</div></div></div>
+    <div class="sb2"><p>まずはたくさんの事例・サンプル文例を読んで、「こんな書き方があるんだ」と感覚をつかむところから始めましょう。</p><div class="tl"><a class="lnk vd" href="https://youtu.be/LZcTtBfAhAc" target="_blank" rel="noopener"><div class="ic">▶️</div><div class="tx">ES作成＆簡易面接対策の解説動画<div class="sub">YouTube 解説動画</div></div><span class="ar">→</span></a><a class="lnk vd" href="https://youtu.be/c-sjlvpcfy4" target="_blank" rel="noopener"><div class="ic">▶️</div><div class="tx">特訓シリーズ→ガクチカ<div class="sub">YouTube 解説動画</div></div><span class="ar">→</span></a><a class="lnk vd" href="https://youtu.be/Qoc7rv7AZc4" target="_blank" rel="noopener"><div class="ic">▶️</div><div class="tx">特訓シリーズ→自己PR<div class="sub">YouTube 解説動画</div></div><span class="ar">→</span></a><a class="lnk vd" href="https://youtu.be/c2m5hrnhLB4" target="_blank" rel="noopener"><div class="ic">▶️</div><div class="tx">特訓シリーズ→志望動機<div class="sub">YouTube 解説動画</div></div><span class="ar">→</span></a><a class="lnk bl" href="https://tanukin0423.github.io/gaku-pr-shibou-mentai/" target="_blank" rel="noopener"><div class="ic">🔰</div><div class="tx">【まず始めたい方】ESフルバージョン（STARメソッド）</div><span class="ar">→</span></a><a class="lnk gr" href="https://tanukin0423.github.io/shukatsu-es/" target="_blank" rel="noopener"><div class="ic">🌱</div><div class="tx">【ES最強作成支援ツール】STAR+WHY+F&C</div><span class="ar">→</span></a><a class="lnk" href="https://kitayama-tama.github.io/4daishitsumon/" target="_blank" rel="noopener"><div class="ic">💪</div><div class="tx">【深掘りしたい方】ES Ultimate Edition（6段論法）</div><span class="ar">→</span></a></div></div>
+  </div>
+  <div class="qrs">
+    <div class="qt">📱 このページのQRコード</div>
+    <div style="display:flex;justify-content:center;margin-bottom:14px;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAAECCAIAAACaLU4HAAAFdElEQVR4nO3dQY4kNRCG0X8Q14EzcTTOBAcq9njjsSLC7p73lojKrO6eT5ZCTuePz+cT+LX9dvsLwH0yABmADCAygMgAIgOIDCAygMgAIgOIDCAygMgAIgOIDCAygCS/n33sj7/+rP0eP+Xfv//53385+z7rdfpMfsP1Xju/sbPfatXfosrZb8xqADIAGUBkAJEB5HhStOqbukzOK3bmJ2eqZjV9M5+q66zu/tvYYTUAGYAMIDKAyABSOCla3Z0q7Ew5zuYnVXc/u1ffXqCz73PmtYmT1QBkADKAyAAiA0jrpGhS32yk7/mvvrvvOLvX5PN6k6wGIAOQAUQGEBlAvs2kaMfObOT9uVDVhOfuaUKvsRqADEAGEBlAZABpnRR91/0nq6qf9GyWNXneUZXX/m1YDUAGIAOIDCAygBROil7bozJ5qnPV1OXu9GZH1T6o11gNQAYgA4gMIDKAJD8+n8/t71Cg6v1od98U33f31/bwvMZqADIAGUBkAJEB5HhSNHny8+R7st4/cei130bffqHJM8CtBiADkAFEBhAZQAr3FE1ODF7bQbTq24lUNT/5in+vnU+dsRqADEAGEBlAZAB58ETrdT5wNvd47QznVdU85+6Tbmfu3n1lNQAZgAwgMoDIAPJtzimq0jdfmtytdHblHZO7g+wpglEyABmADCAygLROivreI7aanITs6PtJz+519qnJCdjZlavuZTUAGYAMIDKAyABSeKL1jq/4hved65yZPGX6tRnd3WfNVlYDkAHIACIDiAwgx+cU9e3h6Zt7VH2fHb/yudNVP8XkKVJWA5AByAAiA4gMIIV7iu5OZs7udWbyZOzX3kHf5+6E0GoAMgAZQGQAkQGk9d1nVTtJdvTNlyYnYK+d+XN2977zq/tYDUAGIAOIDCAygFw/0brvU6u7s5qqe712TtHKu8/gS5IByABkAJEBpHVP0Zm+ecWZvgnG3dnImbt/HecUQSMZgAxABhAZQK6fUzTptXef9Zk8SWnHa8/irawGIAOQAUQGEBlACp8+u/smr7vuPlW347XzhV7bT2U1ABmADCAygMgAUrinqErfPp++6UTfiUM797p7TtHdU6TsKYIyMgAZgAwgMoAcn1PUN3no26NSNd16bS60o29v0uQ3tKcIGskAZAAygMgAcjwpqpr5VE2c+nbI9O2e+oo7dib3kk0+q2g1ABmADCAygMgAMnxO0dmnJvfwTJqcFO1c+e4zYvYUwWUyABmADCAygAy/++zu++779sz0PWtWdfcqrz1VV8VqADIAGUBkAJEBpHBP0Y73pwqTZ0Gv7j6B9drzepOzI6sByABkAJEBRAaQ43OK+lTNas6u/NrMZ/Kpusl9UKu7zw9aDUAGIAOIDCAygLSeaF01Z/geZ0rvXHnyrKe771A7u3LfWUZWA5AByAAiA4gMIMNPn/X5Hk97VfmKEyfnFMFlMgAZgAwgMoC07inqszNVOJs8VJ1K9Npb6Sf/Xq9NgXZYDUAGIAOIDCAygBSeUzS5Q+bs7n1Tl7PZUd9ZRqvJqVTfc23OKYJGMgAZgAwgMoC0nmjdN/fYudfZvqPJiUrV9zm78tn/s7q7W2nlnCI4JAOQAcgAIgPIg+8+OzP53FbV1GXyHfTf4/v0/ZWtBiADkAFEBhAZQL7NpGjH2ZzhtZnG2feZfDvb5DlFVVe2GoAMQAYQGUBkAGmdFL1/jvGOqtOqVzszlr7nrSZP/F5NfmqH1QBkADKAyAAiA0jhpOju29D6dvVMnmX02nXO7rXqm/BUXdlqADIAGUBkAJEBJPnx+Xxufwe4zGoAMgAZQGQAkQFEBhAZQGQAkQFEBhAZQGQAkQFEBhAZQGQAkQEk+Q9Zj78aV6+XBQAAAABJRU5ErkJggg==" style="width:160px;height:160px;border-radius:12px;border:3px solid #E8F5E9;padding:8px;background:white;" alt="QR"></div>
+    <div class="qu">https://tanukin0423.github.io/semi-setsumeishiryou-2026/cards/es.html</div>
   </div>
 </div>
-      <div class="tool-list">
-        <a class="tool-link video" href="https://youtu.be/LZcTtBfAhAc" target="_blank" rel="noopener">
-          <div class="tool-icon">▶️</div>
-          <div class="tool-text">ES作成＆簡易面接対策の解説動画<div class="tool-sub">YouTube 解説動画</div></div>
-          <span class="arrow">→</span>
-        </a>
-        <a class="tool-link video" href="https://youtu.be/c-sjlvpcfy4" target="_blank" rel="noopener">
-          <div class="tool-icon">▶️</div>
-          <div class="tool-text">特訓シリーズ→ガクチカ<div class="tool-sub">YouTube 解説動画</div></div>
-          <span class="arrow">→</span>
-        </a>
-        <a class="tool-link video" href="https://youtu.be/Qoc7rv7AZc4" target="_blank" rel="noopener">
-          <div class="tool-icon">▶️</div>
-          <div class="tool-text">特訓シリーズ→自己PR<div class="tool-sub">YouTube 解説動画</div></div>
-          <span class="arrow">→</span>
-        </a>
-        <a class="tool-link video" href="https://youtu.be/c2m5hrnhLB4" target="_blank" rel="noopener">
-          <div class="tool-icon">▶️</div>
-          <div class="tool-text">特訓シリーズ→志望動機<div class="tool-sub">YouTube 解説動画</div></div>
-          <span class="arrow">→</span>
-        </a>
-        <a class="tool-link blue" href="https://tanukin0423.github.io/gaku-pr-shibou-mentai/" target="_blank" rel="noopener">
-          <div class="tool-icon">🔰</div>
-          <div class="tool-text">【まず始めたい方】ESフルバージョン（事例・STARメソッド）</div>
-          <span class="arrow">→</span>
-        </a>
-        <a class="tool-link featured" href="https://tanukin0423.github.io/shukatsu-es/" target="_blank" rel="noopener">
-          <div class="tool-icon">🌱</div>
-          <div class="tool-text">【ES最強作成支援ツール】STAR+WHY+F&C｜6ツール完備</div>
-          <span class="arrow">→</span>
-        </a>
-        <a class="tool-link" href="https://kitayama-tama.github.io/4daishitsumon/" target="_blank" rel="noopener">
-          <div class="tool-icon">💪</div>
-          <div class="tool-text">【深掘りしたい方】ES Ultimate Edition（6段論法）</div>
-          <span class="arrow">→</span>
-        </a></div>
-    </div>
-  </div>
-  <div class="qr-section">
-    <div class="qr-title">📱 このページのQRコード</div>
-    <div id="qrcode"></div>
-    <div class="qr-url" id="qr-url-text"></div>
-  </div>
-</div>
-<div class="page-footer">
-  <div class="footer-brand">🌱 就活の木｜キャリ支援課</div>
-  多摩大学 キャリア支援課｜キャリ爺（北山 四郎）
-</div>
-<script>
-const pageUrl=window.location.href.split('?')[0];
-document.getElementById('qr-url-text').textContent=pageUrl;
-new QRCode(document.getElementById('qrcode'),{text:pageUrl,width:160,height:160,colorDark:'#2C5F2D',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
-<\/script>
+<div class="ft"><div class="fb">🌱 就活の木｜キャリ支援課</div>多摩大学 キャリア支援課｜キャリ爺（北山 四郎）</div>
 </body>
 </html>
