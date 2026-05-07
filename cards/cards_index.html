@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>28卒 就活サポートページ一覧｜就活の木</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans JP',sans-serif;background:#F0F7F0;min-height:100vh;}
+
+/* ヘッダー */
+.header{background:#2C5F2D;color:white;padding:24px 20px;text-align:center;}
+.header .brand{font-size:11px;font-weight:700;letter-spacing:0.12em;color:#97BC62;margin-bottom:8px;}
+.header h1{font-size:22px;font-weight:900;margin-bottom:6px;}
+.header .sub{font-size:12px;color:#C6E1C6;line-height:1.7;}
+
+/* フィルターバー */
+.filter-bar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:14px 16px;background:white;border-bottom:2px solid #E8F5E9;}
+.filter-btn{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700;border:none;cursor:pointer;background:#F3F4F6;color:#6B7280;transition:all 0.15s;}
+.filter-btn.active{background:#2C5F2D;color:white;}
+
+/* グリッド */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:16px;max-width:760px;margin:0 auto;}
+
+/* カード */
+.card{background:white;border-radius:18px;box-shadow:0 4px 16px rgba(0,0,0,0.08);text-decoration:none;color:#1F2937;display:flex;flex-direction:column;overflow:hidden;transition:transform 0.15s,box-shadow 0.15s;border:2px solid transparent;}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.13);border-color:#97BC62;}
+.card-inner{padding:16px 14px 10px;flex:1;}
+.card-icon{font-size:36px;margin-bottom:8px;}
+.card-title{font-size:15px;font-weight:900;margin-bottom:6px;color:#1F2937;line-height:1.3;}
+.card-desc{font-size:11px;color:#6B7280;line-height:1.6;margin-bottom:10px;}
+.card-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;margin-bottom:10px;}
+.card-badge.green{background:#E8F5E9;color:#2C5F2D;border:1px solid #C8E6C9;}
+.card-badge.amber{background:#FEF3C7;color:#92400E;border:1px solid #FDE68A;}
+.card-badge.red{background:#FEE2E2;color:#991B1B;border:1px solid #FECACA;}
+.card-qr{text-align:center;padding:8px 0 4px;border-top:1px solid #F3F4F6;margin-top:6px;}
+.card-qr img{border-radius:6px;border:2px solid #E8F5E9;}
+.card-qr-label{font-size:9px;color:#9CA3AF;margin-top:4px;font-weight:600;}
+.card-arrow{background:#2C5F2D;color:white;text-align:center;padding:10px;font-size:12px;font-weight:700;}
+
+/* フッター */
+.footer{text-align:center;padding:20px;font-size:12px;color:#6B7280;background:white;border-top:1px solid #E5E7EB;margin-top:8px;}
+.footer .fb{font-weight:700;color:#2C5F2D;margin-bottom:4px;font-size:13px;}
+
+@media(max-width:400px){
+  .grid{grid-template-columns:1fr;}
+  .header h1{font-size:19px;}
+}
+@media print{
+  body{background:white;}
+  .header{background:#2C5F2D!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="brand">🌱 就活の木｜キャリ爺（北山 四郎）作成</div>
+  <h1>28卒 就活サポートページ一覧</h1>
+  <div class="sub">自分が今やるべきことを選んで、<br>そのページを開いてみてください。</div>
+</div>
+
+<div class="grid">
+
+    <a class="card" href="jikobunseki.html">
+      <div class="card-inner">
+        <div class="card-icon">🌱</div>
+        <div class="card-title">自己分析</div>
+        <div class="card-desc">自分の経験・価値観・強みを深く知る。就活のすべての出発点。</div>
+        <div class="card-badge green">春〜通年</div>
+        <div class="card-qr">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAIAAACW1xIWAAAEbUlEQVR4nO2dQY4kNwwEvYa/s36Tn+Y32Q+avdYeCJAgs3qAiDj2qChNJwi2SIn14+vr6w9h8OenFyDvodggFBuEYoNQbBCKDUKxQfxV/eHnP3+fT/b/v/+dzFXZqfjU//Ic0/k8vTY9G4Rig1BsEGXMfjKNkU8SMamyWa2zEzun9is7m3ic/p71bBCKDUKxQbRi9pNObOjEnum+sxNfO89u9vqb3x+J3MDUpp4NQrFBKDaIccxO0Nn7Vkx/H1TPTnPdiTFp9GwQig1CsUF8i5g95Sr+Tfey03z4p2JzhZ4NQrFBKDaIccxOxKHNXjltf5PDT+cPpujZIBQbhGKDaMXsxDmyzlybM2XTzzv2K67mTX/PejYIxQah2CDKmP1mXne6l92cz/oOe/rN+A16NgjFBqHYIH5UfdAS94kT+8ur+1rTMZu1PXnz94GeDUKxQSg2iFbM3rCp7ybuUk+5qk9P77B1np3a0bNBKDYIxQZRxuwOV3esO/Y3fCrPv2HTQ80+aKLYJBQbxCpmP9n0Qtmc1Urcs0rbr+aquMpJ6NkgFBuEYoM4i9kVV+elP3WW+2qd6R7j1Rqe6NkgFBuEYoNovSNkU0u+OvOViK8b+2/mD67Qs0EoNgjFBrG667W5l5WI5Z11buwn7lunv7cnejYIxQah2CDGd72qMU+u6q/TZze9ya7OzXXW2RnfWcPUvp4NQrFBKDaIVj07fU+pIhH7r8a/+X6zq9q8ng1CsUEoNohxPXua703Xs6/e4zkdP7U5nStR49ezQSg2CMUGscqNVyRq2Ik4mujrcvUbJZFL17NBKDYIxQYx7oOW2LNOx6d7qFXrebNGcFXjf6Jng1BsEIoN4ixmp5+t7KR7sFzlA65sbvIfejYIxQah2CAifdDSOerOs5/ql56ItVc29WwQig1CsUGc9VR58yzYpqfYJvd+9T1Uz24wNy6/odggFBtEGbOfbGJqx86URIxM3PO+6mV2ZUfPBqHYIBQbRKTf+Hfry33VFyUxV6J+X6Fng1BsEIoNInLXq+Kq19imn8mnerd17KT37no2CMUGodggzmJ2+t7Udzvj1lnb5vMN1rNFsUkoNohWPXvKm++tutq7V7Hzzd6inbVt0LNBKDYIxQYxjtlX57yq8W/G8umYaQ/RaR/TDpvfKHo2CMUGodggImfQOiTyw1f9UqY2r+68ddZmPVtaKDYIxQbRup99RefdHukz3ps9ceI9YNN74Zvzd3o2CMUGodggWrnxRByd/ibY9DypxlytIdHjpTPvdC49G4Rig1BsEJF6dqImfbXXvKq1b+r6m7i+yX/o2SAUG4Rig4icG5+SOLc13RNPx7/5jpDNebonejYIxQah2CC+RcyuSNzDrsYnzoRPc/Wdz6u5OujZIBQbhGKDGMfsdA/tq17lm7Pc073+m31XqnndZ8tvKDYIxQaxekfIhjdruun3j23q64n9dIWeDUKxQSg2iI/dz5b30bNBKDYIxQah2CAUG4Rig1BsEL8Asg3GewrA5bIAAAAASUVORK5CYII=" alt="QR" width="80" height="80">
+          <div class="card-qr-label">QRで開く</div>
+        </div>
+      </div>
+      <div class="card-arrow">開く →</div>
+    </a>
+    <a class="card" href="intern.html">
+      <div class="card-inner">
+        <div class="card-icon">☀️</div>
+        <div class="card-title">インターン</div>
+        <div class="card-desc">申込→参加→振り返り。夏が最盛期、秋冬は早期選考直結型が増える。</div>
+        <div class="card-badge amber">春〜 夏最盛期</div>
+        <div class="card-qr">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAIAAACW1xIWAAAEXElEQVR4nO2dQY4bMQwEs0G+k7wpT8ubkgc519mDsCTInjFQVUdbIw3cIGhKFPnxer2+CYPvT7+A3Idig1BsEIoNQrFBKDYIxQbx4/TFz9+/1hf79+fvl/NPxlw/v/LUWpVn07/zFS0bhGKDUGwQR5995eQDKlR80pYProzZ+t+QIP07a9kgFBuEYoMo+ewrXR9cGVPx05VnK+/QjXcrY7rvX2Hrd76iZYNQbBCKDaLts7eo+L8r3di3O6br4yvcGaNX0LJBKDYIxQbxmM/unvV2/d/kLDnhy7fi7wlaNgjFBqHYINo+O+F7ErlaXZ86+U9QGfMOPl7LBqHYIBQbRMlnJ/Z4J3vOCV+e/rz7bgm0bBCKDUKxQXw8VVNlEk9v+cLJPJOc9qf2ybVsEIoNQrFBlO5nJ+5HTWLrK1trpffeJ/NMtLiiZYNQbBCKDaIUZ2/FxFt3tdMx+p373lv/JyrzaNkgFBuEYoNo10FLn+9O4t0rlfzzdHx8YlKvbYKWDUKxQSg2iGOcvRXjpvOwEnVMT+MTtVdPWFNFRig2CMUGEbmfnd7H3vK7FbZi3EQ9VM+z5Yhig1BsEGt3vbZi8TvPyCtjtu5Sb/npie/XskEoNgjFBjG665XwQwkm7znxx4nz8slaWjYIxQah2CAicfaEO3tZJua5ksi/M86WEooNQrFBtPPGJ/ekT/MkctS3SOyln8Zv/bYntGwQig1CsUGU8savJPKi0/8D0r6wQvoeeeVZLRuEYoNQbBDHODvdB3qrB/bk8+5ak1y2O/cGTmjZIBQbhGKDGMXZXbZ8cyKe3oprE3fYKmuZgyafUGwQig0i3j/7Hfp3VeY/PXs6b574761abF3/rWWDUGwQig2iXW+8SyKGTvTVOL1DZc7uulv9xIyz5Yhig1BsEGu9ONM1PhO1U7okcuO3/HoFLRuEYoNQbBCjOPvO+tvd96k8+w757ZV1t+bUskEoNgjFBtG+n32iki9d4U5/3KUyf6InylYsrmWDUGwQig1idNcrURvkzppi3fF39jfrvkNlLS0bhGKDUGwQkb3xtG9Lnyuf1kqfhW/l2Z3QskEoNgjFBlHaG0/cJ66s2yVRp+U0ZuJHE3XZvOsln1BsEIoNIlIHbSt/Ku13T3Oma62nx5/QskEoNgjFBjGqqbLl17uxaeLeV2UPf+usepIrMLl3rmWDUGwQig1iLW+8QnevOFEHLdF746lc9+5vomWDUGwQig2iFGffuU9e4c7eYpNnt+qcT8Zf0bJBKDYIxQZR6hGytS+dvrvcnTORK57u32XtUimh2CAUG0S8R8iJRI/L0/jKO1SendT9TvcXMW9cPqHYIBQbxGM+u0viXlki//w0ptsf7MSk/pqWDUKxQSg2iLbPTtTzqnye7tNVGX8ifaf8tJa1S+WIYoNQbBCl8+wtJmex73AevOWbKyTW0rJBKDYIxQax1otT3h8tG4Rig1BsEIoNQrFBKDYIxQbxH4klngNlvbY5AAAAAElFTkSuQmCC" alt="QR" width="80" height="80">
+          <div class="card-qr-label">QRで開く</div>
+        </div>
+      </div>
+      <div class="card-arrow">開く →</div>
+    </a>
+    <a class="card" href="kigyo.html">
+      <div class="card-inner">
+        <div class="card-icon">🔍</div>
+        <div class="card-title">業界・企業研究</div>
+        <div class="card-desc">業界・企業・職種の3つをセットで「なぜこの企業か」を自分の言葉で。</div>
+        <div class="card-badge green">春〜通年</div>
+        <div class="card-qr">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAIAAACW1xIWAAAEYUlEQVR4nO2dS24cMQwF4yDXSc6Uo+VMyYGcrWZBmARJTQNVtbSnJU0/EBxJ/Hx8fn5+Ewbf370AuYdig1BsEIoNQrFBKDYIxQbxI/rHz9+/xif79+fvl5855z0/P7WejTVEn6n+fYroO2rZIBQbhGKDCH32ScbPRWR8UuTPquvJjFP1nZ21Vf3x9nvWskEoNgjFBpHy2ScZ39DZy3bWkNnXRnNt+O9o/AxT7/lEywah2CAUG0TZZ29T9bXVffxJx39H43fOALbRskEoNgjFBvEIn131Z5l9cHXek+i3Qmd//wS0bBCKDUKxQZR99rYfqsZwRc9GVJ/diEfLsPGetWwQig1CsUGkfPZGbPNJJ26rE6c95Ren5t1+z1o2CMUGodggQp/9tHPdzN1z9Pep3wEZnrCfjtCyQSg2CMUG8RHVQdvIJ944086MM5UbVqWz5qnxT7RsEIoNQrFBhD77pOPbpuKoN3Kvb95PV99P5tnqOFo2CMUGodggUj47YrtmyFRNsZv5Vxv12qa+r5YNQrFBKDaI8j67ytR5+JTf6qwhena7ftnUOYSWDUKxQSg2iPI+ezvnKjNvho0Y8u3fGVPos0WxSSg2iLFcr6n76ak9/cZ9eTRXZpwn1ErTskEoNgjFBrF+Nh4xlbu80XcrejZaT/U3x1QfEe+zJUSxQSg2iHJfr+2aJCfv6gfaGaf6rqbu5o0blxcUG4Rigyj3z57KoeqwfQa+cQZQXU+nlqr7bFFsEooN4mrc+Eas9dQ+NTNXZsynxbefaNkgFBuEYoN4dB207TreG+Nv1HKJ8D5bQhQbhGKDaPXi3IidnqITB15df/WMfbvuSoSWDUKxQSg2iLE6aFOx0NW5Mmw/O5XnvZFTfqJlg1BsEIoNonw2PsVUXdKTjdi3jXPy7RquEVo2CMUGodggxmqqbPjLTg/NiOqd98Z9dmbeKsaNywuKDUKxQaT6Z7+rL9ZUTHXm80/YT0dMjaNlg1BsEIoNopyfnfnMdn72dq5XZ6/8tNi6Ey0bhGKDUGwQV++zO7nO0ec38qdv9vLajjs70bJBKDYIxQbR8tlTPb5ONvpubZ9vT/ngjbi5Ey0bhGKDUGwQ5fzsm3W+tvPHMmvY8Meds/oI87PlBcUGodggxuqgbfSq2ojTftd36WB+tpRRbBCKDaJVU6VDx79O1WDZPku/WZc0g5YNQrFBKDaIVtx4lUy9z06Nz06Md2bem326onk7OehaNgjFBqHYIMr9s6tkfFVnrqm64p253lW3tTqXlg1CsUEoNohWDFrEzRzl6O83z8M768wwdUeuZYNQbBCKDaLV12ubjRrdU/VVtnPSqmf1xo3LC4oNQrFBPMJnV+99o2c32Ih9O8ncYWfmyqBlg1BsEIoNouyzN2pob9Qg26hnsh2bVn0n7rMlRLFBKDaIsb5eVabqeN/s59G5n765n47QskEoNgjFBvG2/Gy5j5YNQrFBKDYIxQah2CAUG4Rig/gPnqrQZKiJUpMAAAAASUVORK5CYII=" alt="QR" width="80" height="80">
+          <div class="card-qr-label">QRで開く</div>
+        </div>
+      </div>
+      <div class="card-arrow">開く →</div>
+    </a>
+    <a class="card" href="es.html">
+      <div class="card-inner">
+        <div class="card-icon">📋</div>
+        <div class="card-title">ES作成・添削</div>
+        <div class="card-desc">志望動機・ガクチカ・自己PR。ESは面接の設計図。</div>
+        <div class="card-badge amber">夏〜 秋冬集中</div>
+        <div class="card-qr">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAIAAACW1xIWAAAETElEQVR4nO2dQY4cOQwEbcPf2X3TPs1v8j5o9to+ECBBZlcvIuI6Gqm6EkSWJIr6/vX19U0Y/Hj6AeR9KDYIxQah2CAUG4Rig1BsED+rP/z1z9/ng/376/eo/9f2G67Geu2n+i2d3zh9D1Oq32Jkg1BsEIoNovTsVzbeeeVblS92mPrrxo+n7avnnNLp38gGodggFBtEy7NfSXhP5W0dX5z22elnM2+ePmdF4j0b2SAUG4Rigxh79hUb/9usY2/63Ix1tc6/wcgGodggFBvEY55dUfnfO3166sGJPekERjYIxQah2CDGnv0J88WK6bN1vg+u9r+nJN6zkQ1CsUEoNoiWZ6fnkVe5XVPvTHhtxXR+n8DIBqHYIBQbxPenaqpM88kTZ6g2fX7yekOFkQ1CsUEoNojSs69yvtJno9NtKtLvZDpu53cZ2SAUG4Rig2jNs688Jj23fmUzF5/64lPvp2pTYWSDUGwQig0ikoNWnbHunMNOr0VvaqRUXHlquk8jG4Rig1BsEI/tZ0/Z+HqiFsomR73qx3m2nKHYIBQbxNizEzW3p+N22Dxbp5/pWK9s3snme8LIBqHYIBQbRCsHreKpM1FV+w7pu0CuvleuvnVeMbJBKDYIxQZR7mdf1Se52quetv+/5JG9864UIxuEYoNQbBDxs15TEmvgiXGrZ7jqs+p/8w1kZINQbBCKDSJyr1d6XT1xnnvTf4fEmbQpRjYIxQah2CDOctA2bV5J+Ou0n/R+dmfcTZsKIxuEYoNQbBCRe70SddCm/W/u40rk1iXeifvZUqLYIBQbxNl+9hXpvPENT9V7qdpUz1ZhZINQbBCKDWJcu/ST741O1xifjlW1f6q2mpENQrFBKDaI1fnsiqvzx+ka45vzYE/VSO88Z4WRDUKxQSg2iNb57HfW6J5+K6R9ejpuxdXZ9KrPDkY2CMUGodggSs+e+vHU4zdz080awFNz33TNlg5GNgjFBqHYIFb72Z02V/PgK9L3hSTWt51nyxjFBqHYIFZ54+n7r67yttJ+3CG9Vt/ByAah2CAUG8TqLs53es9T9UympNf5vSNEWig2CMUGEampsqmJXbVJ+3GibnniXJl3hEgLxQah2CDGOWhTH/qEfLHqfxPnvioS72H6foxsEIoNQrFBrNbGN3zC2vWUpzze/WwZo9ggFBvEeJ69oVMDvPO/ibX3q3PhU96ZM29kg1BsEIoNorWffTU37fS58c6Of1/d1XHl/dZUkQiKDUKxQUTuz75a+73KD6/YrF1v1gwSc/TOMxjZIBQbhGKDiOSNd7hal556Z+IOj6f6n/ZpZINQbBCKDeIxz65I1BRL3Nl1laN+tZ/tHSHyB4oNQrFBjD07nSfV4areZ8eDN+vknXGvaprq2fIHig1CsUG0PDuRQ56uUfrOuitTEjXjOv9rZINQbBCKDeKx89nyfoxsEIoNQrFBKDYIxQah2CAUG8R/G3O+Xl142gQAAAAASUVORK5CYII=" alt="QR" width="80" height="80">
+          <div class="card-qr-label">QRで開く</div>
+        </div>
+      </div>
+      <div class="card-arrow">開く →</div>
+    </a>
+    <a class="card" href="spi.html">
+      <div class="card-inner">
+        <div class="card-icon">📝</div>
+        <div class="card-title">SPI・筆記対策</div>
+        <div class="card-desc">早めに始めるほど有利。今日の10問が半年後に返ってくる。</div>
+        <div class="card-badge green">春 今すぐ！</div>
+        <div class="card-qr">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAIAAACW1xIWAAAEZUlEQVR4nO2dQW6cMQhGm6rXSc/Uo+VMzYGmW3eBBAI8v/TeWyaO7ZlPiBgD/ni9Xj+Ewc93b0DuodggFBuEYoNQbBCKDUKxQfyKfvH55/f4Yt9ff0vjoz2c85xjop9X95D57NE8mf1k9tkh2puWDUKxQSg2iNBnn1R97UnGJ0X+rOqDo3kya1X9dGfPmfmrZNbSskEoNgjFBpHy2SedM2h1no7Py/jUzN9OMRVj6MypZYNQbBCKDaLsszeYimlHVOeM9lONe0d76HyWDlo2CMUGodggHuGzTzrn0WqMuhMPz4x5l2+O0LJBKDYIxQZR9tkbfqjqCzPzZM7QmT10ctw6/nvje9ayQSg2CMUGkfLZG/e7Jxu5YJ049s39nGx/z1o2CMUGodggQp99M647Fbuuzp8Zv30+vvk9a9kgFBuEYoP4iPqgbdQTV/3r1Hm0kxd28/NuzH+iZYNQbBCKDSLlszts+N2pviU376ff1ePlRMsGodggFBtEq6dKx8/drO+aqr/a6Gu2XYd2omWDUGwQig2iFRvfqFGu+tGb59eNOq6NO3t9tig2CcUGMVbrtXEfPFU/3akBq+7t5lm8ipYNQrFBKDaI8JwdsXGne7Lxzkcntt+Z82m90rRsEIoNQrFBjOWN33yTY2rMdh12dZ4MHS20bBCKDUKxQbTO2Rk698FT/dFu5mZHc27czVfn17JBKDYIxQZRfj97KiY85SM3/OhGr/Lqfjq9VD1ni2KTUGwQqXP29hm0OufNd6kz607ViFfXrc6jZYNQbBCKDaLcU2XqjrnK9lucG7ljU99hhPfZEqLYIBQbRDkHLWIjTztDx9dW56yOicZn2Nizlg1CsUEoNohyffaUL8/4sI6P7/jvjZ6mG/ntUV+5CC0bhGKDUGwQqXe9Nt6x6Pi8DFO5Y9u+NrOHqTm1bBCKDUKxQZTzxqMxT+tbEpGZ82YN+tR9v7Fx+Q/FBqHYIFp541O111M9Wzps5J1t54SbgyYhig1CsUGs9BvfiKWfPK3Wa7vn6NRaWjYIxQah2CBSsfHOGbdzL7vh+zfum6t0vofOulo2CMUGodggxmq9or89eVfvke33PKK1bv6PEu3hRMsGodggFBtEOTZepervN/qWZOjEvbfPylPxdi0bhGKDUGwQLZ+9nRf9tNruzFpTvcoza0V4zhbFJqHYIMrvek2x0fd0I74djX9anD+Dlg1CsUEoNohWfXaVTN+uTl7b9pn45jtdJ1M16Fo2CMUGodggUrHxjfc5NuLDG3Hvat/QjTq0qZw1LRuEYoNQbBCtfuMRN/POpuLhmTHVOaf+X5nKLdeyQSg2CMUGsZ43nuHm2XSjrjpiqk5s6u5fywah2CAUG8QjfPZJ5w74Zp+TKTpvohgblxDFBqHYIFZ6qnTmmYq9b8fPt/czlft2omWDUGwQig0i5bOn2Kjj6ozpsN3zfKNvq5YNQrFBKDaIt9Vny320bBCKDUKxQSg2CMUGodggFBvEP0WE6Ue+oCOrAAAAAElFTkSuQmCC" alt="QR" width="80" height="80">
+          <div class="card-qr-label">QRで開く</div>
+        </div>
+      </div>
+      <div class="card-arrow">開く →</div>
+    </a>
+    <a class="card" href="mensetsu.html">
+      <div class="card-inner">
+        <div class="card-icon">🎤</div>
+        <div class="card-title">面接対策</div>
+        <div class="card-desc">頻出質問対策。練習した回数だけ自信になる。声に出すことから。</div>
+        <div class="card-badge amber">秋冬〜 本選考最重要</div>
+        <div class="card-qr">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAIAAACW1xIWAAAEYklEQVR4nO2dUY4jNwwFdxa5TnKmHG3PlBxo8isDEUCCfG0vqurTI6s1/UDQFEnp6/v7+4cw+PnuBchzKDYIxQah2CAUG4Rig1BsEH/c/vDn33+tP+zfX//87/y3zydzbo05P7/RHX/77ha3NWjZIBQbhGKDuPrsk64fOkn40dv8lXVu+e+EX0+85xMtG4Rig1BsECWffVLxDV0fVhkzicVv89zW2fXTiVh56z2faNkgFBuEYoNo++wtKv7y9vmWv6zEvt3ndv+vJ9GyQSg2CMUG8TaffTKJa7v71ZPc80k6zk6gZYNQbBCKDaLtsyd+7mQSTz+Zb97yx933tvWeT7RsEIoNQrFBlHx2Oo58MmbdirPTewAJtGwQig1CsUF8fcKZKk/GuFtxeYVuzjuNlg1CsUEoNohSf/bWnvNJpX57Kw5O13VX1j+pk6+MqXxXywah2CAUG8TVZ2/1a2359XTMmtivruTsK2vozn9Dywah2CAUG8Sobjzh17d6ryfPmszT3TPo+vXKGm5o2SAUG4Rig7jms98V+yb6nt/VJ7aVRziZvFstG4Rig1BsEO2zSyc+dZKj3fLlW/vP3bq5dD25+Wx5QbFBKDaIUj574ncnvrzrC29MctK/Yx/aDS0bhGKDUGwQo/PGt/aHE/ngxNq682yde1p5VgUtG4Rig1BsEKX+7Ilv2/JhiR6z2/gn+7m7sfvE92vZIBQbhGKDaNeg3UjUbW3Nn7jnI92XlXhXWjYIxQah2CBKPvsT9qUT+d30OWuTeW5Masu1bBCKDUKxQUT6sz/BF6Z/Z3RJnIlmf7ZcUWwQig0iUoOW2Me+zT+JxRP56Umv2iR3Xlmzlg1CsUEoNojImSpdEuelVOa/Petd932dJNasZYNQbBCKDWIUZ59s7S1v+bwKk3NST7ZyBInfCidaNgjFBqHYINbOQTtJ3+eROIs7sRc9Wc/J1p6Hlg1CsUEoNoj2OWiTMTcSPdCTuDyR577Nf5Jem5YNQrFBKDaIUZz9CTF35Vlbddrd8ZPfCgm0bBCKDUKxQaydgzYhcf/HVv47cQZLwn+bz5YXFBuEYoO4xtmJ2q6tvPhtzso86dx8916vClu/mbRsEIoNQrFBlPLZJ+n+7O74rRzw73Le+OS7WjYIxQah2CDW4ux0LLtVyz2Zc6sfPdEDZg2avKDYIBQbRCmfnWDLT2/50RtbeejEHkN3vJYNQrFBKDaISD77xpM9zemzzxK95taNyxqKDUKxQbR7vbpM6tG2zkRL3CGWqEvvYn+2XFFsEIoNYu3s0pOtmDWdY07Etd3fEIlnuTcuik1CsUGM7uLcIn3O2lbN+Y3EXWTdPQPjbHlBsUEoNoi3+ezK3vKTNee3726NSdfTGWfLC4oNQrFBlO7iTOdcJ/4sXbc16c9O3IHmmSpSQrFBKDaIUpydqCHfOi9sy7c9Wb+duG/UOFteUGwQig3ibf3Z8jxaNgjFBqHYIBQbhGKDUGwQig3iPwM6pOQz6vNuAAAAAElFTkSuQmCC" alt="QR" width="80" height="80">
+          <div class="card-qr-label">QRで開く</div>
+        </div>
+      </div>
+      <div class="card-arrow">開く →</div>
+    </a>
+    <a class="card" href="soki.html">
+      <div class="card-inner">
+        <div class="card-icon">🏆</div>
+        <div class="card-title">早期内定（意欲層）</div>
+        <div class="card-desc">秋冬インターン→早期選考へ。動いた人だけが手にできるドア。</div>
+        <div class="card-badge red">秋冬早期選考</div>
+        <div class="card-qr">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAIAAACW1xIWAAAEVklEQVR4nO2dQY4dNwwFM0GuY58pR8uZkgONt9oIIUG+7g9X1dJWtzT/gWCLIqmv7+/vP4TBn28vQJ5DsUEoNgjFBqHYIBQbhGKD+Ov2Hz/+/rk+2X///Pu/7z/HVNbTHT9ZzzmmMm/l2fTvfKJlg1BsEIoN4uqzT24+oMLEd1bmnfja7rNp0r+zlg1CsUEoNoiSzz7p+uDumK7f6s615b+7+/4uW7/ziZYNQrFBKDaIts/eouuTKv61uyfuxrpva9taTxotG4Rig1BsEK/57K2z3q5f7Pra7rl1Zd630LJBKDYIxQbR9tlp3zOJXafnve37b0zO6RO/s5YNQrFBKDaIks9OxHgne+vuHj2Rv919f/edCbRsEIoNQrFBXH32J8RyT57MXb/9+1ZOe2XeBFo2CMUGodggSvXZifqoybn1Vg331rMTtmq+T6zPFsUmodggvm69Sydx2q28rYmf7q7trXc+uV/XskEoNgjFBlGKjSdqlxN9zbprm+SRTUjECSpo2SAUG4Rig7jus0+2YrOJ/p2T3qK399zGp2PXlXV233OiZYNQbBCKDaLksys82d874XcrJHLaE3ieLYpNQrFBjHqXpuuMu/1NEzH5ynsSZ+TdNVTQskEoNgjFBlHKQdvykW/VjyVyyirv39rTb31zaNkgFBuEYoNY22c/eZflFok8tZN0Pbf7bLmi2CAUG0S7p8pWXXW6lmyLRCyh2w916+/SskEoNgjFBjGKjXdJ7CO38r3TbP1dJ/ZUkSuKDUKxQYzqsxNM5prciZmu9Xorh/xEywah2CAUG8SoD1q6FvnJXmlvxRImz3ZjIVo2CMUGodgg2j1Vtvjkfp+JuvDKGtLxAC0bhGKDUGwQpbzxJ/evT/ZK26rVPpnc0dn9nd1nyxXFBqHYINqx8USNVmK/u1UznfhWqIxJ1LJr2SAUG4Rig2jnjaf9Stofv5UPf/LW3WJaNgjFBqHYINbqsxO1TN1nJ/54Kyaf2MdvfTNp2SAUG4Rig2j3Qbvx5H2dk2crvHWXV4XJXFo2CMUGodggSj57y7+m77xKfzds5aZVnjU2LiMUG4Rig7j67MT9XVtnyYn7Ok8medqJ/PAttGwQig1CsUG0z7O34tJd37bVO2Xy3bDla7fGe54tVxQbhGKDaJ9nJ/bck3m34u2TMVu+/zbX5AziRMsGodggFBtEKTa+ReI8eGt8hcRcW7nuFbRsEIoNQrFBjPqgVdi6r/OT/eWTfeImWmjZIBQbhGKDaMfGt/zQ5P6rbm7XSddP38Zv3fFVYau/jZYNQrFBKDaItfrsLokeJol9c6KHzJO1cydaNgjFBqHYIF7z2SeTve/JVt7ZVj5a9zugwiTGoGWDUGwQig0ikjfefU8lNl55tjLXjUTvswqJGrkbWjYIxQah2CDa93pNeDLOPFlDhU/oQ96dS8sGodggFBvE1WfL74eWDUKxQSg2CMUGodggFBuEYoP4Bdmco5Dhjqd5AAAAAElFTkSuQmCC" alt="QR" width="80" height="80">
+          <div class="card-qr-label">QRで開く</div>
+        </div>
+      </div>
+      <div class="card-arrow">開く →</div>
+    </a>
+    <a class="card" href="honsen.html">
+      <div class="card-inner">
+        <div class="card-icon">🎯</div>
+        <div class="card-title">本選考・内定</div>
+        <div class="card-desc">4年3月解禁→6月内定。本選考の土台は今この瞬間に作るもの。</div>
+        <div class="card-badge red">4年3月解禁 6月内定</div>
+        <div class="card-qr">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAIAAACW1xIWAAAEU0lEQVR4nO2dQY4kNwwEvYa/s36Tn+Y3eR80vtYeCJAms2vhiDj2qFTqSRBsUST17evr6zdh8PvbC5DPodggFBuEYoNQbBCKDUKxQfxR/eH7X3+ev+zH3//85/mfz3bozN9ZTzWmWk81pvP5FdXatGwQig1CsUGUPvvJ1F8+ufKdnTmf82z8ZWdMx39PSf+ftWwQig1CsUG0fPaTqQ/ujLnav07HT/13NX/Cf1/9n59o2SAUG4Rigxj77CumvnYTT97slTfrScS9N2jZIBQbhGKDeM1np2PXm/k3vrziav+9QcsGodggFBvE2GenfU8idt1ZcyInbhr/n84/RcsGodggFBtEy2cnYrxXedQb3zzdi28+75COpWvZIBQbhGKD+PZWT5Vp/LnDdJ6NT92s+a04uZYNQrFBKDaIVn321RlzNb5675SNb34rXyyRM299tig2CcUGsdpnv+WbNyTi5x3Svyc682jZIBQbhGKDiPRBS+SObeLkiVrqzTzpGH6Flg1CsUEoNohyn32Vd73pndLhav7N+KvYdee903meaNkgFBuEYoOI1Gdf9dlO+N30nrgzz9W5gOfZUqLYIBQbxKrWKx3f7vDWXSDVsxVX333z/9SyQSg2CMUG0cpB+6QPfrLJF6vGpNcwfbYz51W8XcsGodggFBvEOAct0S9sepfXrxav/mQvNvfZ0kKxQSg2iNJnX51JX9Vbv9WHJP0bpbp3ZLOGCi0bhGKDUGwQ47zxhA/rvDc9Js1V/t0Tc9CkRLFBKDaISE+VRN+0NIkeZFdjKvTZUqLYIBQbRGuf3eFXuO/rkz3AP1nDVj07PTvQskEoNgjFBrGqz77K605w5Ts3/nhzP3eHqf/WskEoNgjFBjGu9ZqS7i+W9rudOafvTezp3WfLTyg2CMUGMa71St89lagFT+z1E+uZ5pPbu1RKFBuEYoNY7bPTuWaJ2Hti/Fs169M5tWwQig1CsUGc9RtP3FXVefYq/twhncvWmXPzHbVsEIoNQrFBtHz2J2us0/lfFVe+M32f5uZdWjYIxQah2CDGd4Sk65inedcdqjk/GfdO/+YwNi4/odggFBtEpA/aW/3ANzHkhG++qiO/Gq9lg1BsEIoNotVvvPp8ug++Opfd/CZI9CZLxOE34yu0bBCKDUKxQcR7qnRI702v4vNXZ9WbfPVN/EPLBqHYIBQbxLg+e0PCVyX8azpGXT2byDl/omWDUGwQig0ikjf+JOH7E/dipXPjKxJ79AotG4Rig1BsEOPY+JUf2vQoTe9rO2M2OWib82x7l0oLxQah2CDOeqpMSdR3XeWKJ3LCr3rGbdagZYNQbBCKDeI1n90h3VPlKg+8YnoG32HTe1zLBqHYIBQbxNhnJ/p5VZ9f9TBP5I5dMf0u9i6VFooNQrFBtHqqXHFVx/XJNVytJ50T3nmXlg1CsUEoNojWvV7y/0DLBqHYIBQbhGKDUGwQig1CsUH8C8/LmNj34pE1AAAAAElFTkSuQmCC" alt="QR" width="80" height="80">
+          <div class="card-qr-label">QRで開く</div>
+        </div>
+      </div>
+      <div class="card-arrow">開く →</div>
+    </a>
+</div>
+
+<div class="footer">
+  <div class="fb">🌱 就活の木｜キャリ支援課</div>
+  多摩大学 キャリア支援課｜キャリ爺（北山 四郎）
+</div>
+
+</body>
+</html>
